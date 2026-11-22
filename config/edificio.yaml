@@ -96,10 +96,13 @@ ocupacion:
 
 # Precios y factores para Panamá (supuestos; actualice con pliego tarifario ASEP vigente)
 tarifa:
-  precio_punta_usd_kwh: 0.245      # lunes-viernes 09:00-17:00
+  tipo: BTD                          # BTD = precio único de energía | BTH = punta y fuera de punta
+  precio_energia_usd_kwh: 0.199      # ENSA BTD, II sem. 2026 (energía + alumbrado público)
+  cargo_demanda_usd_kw_mes: 17.10    # ENSA BTD
+  # solo se usan si tipo = BTH
+  precio_punta_usd_kwh: 0.245
   precio_fuera_punta_usd_kwh: 0.185
   hora_punta: [9, 17]
-  cargo_demanda_usd_kw_mes: 19.50
   factor_co2_kg_kwh: 0.31
 
 # Inversión del EMS para 800 m² (retrofit ≈ 35–40 USD/m², supuesto: cotizar localmente)
